@@ -1,0 +1,27 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    types: [closed]
+    
+
+jobs:
+  build-and-deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.6.1
+      - run: npm install
+      - run: npm run lint
+      - run: npm run prettier --write
+      - run: CI=true npm run test
+      - run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
