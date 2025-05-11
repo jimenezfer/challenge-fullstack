@@ -4,17 +4,21 @@
   "description": "A brief description of your project",
   "main": "index.js",
   "scripts": {
-    "install": "npm install",
+    "start": "node index.js",
     "lint": "eslint .",
     "prettier": "prettier --write .",
-    "test": "CI=true jest"
+    "test": "jest"
   },
+  "keywords": [],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
+    // Add your project dependencies here
   },
   "devDependencies": {
-    "eslint": "^9.26.0",      
-    "prettier": "^2.0.0",    
-    "jest": "^27.0.0"        
+    "eslint": "^8.45.0",
+    "prettier": "^3.0.0",
+    "jest": "^29.0.0"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -24,15 +28,13 @@
       "node": true
     },
     "rules": {
-     
+      // Add your custom ESLint rules here
     }
   },
   "prettier": {
-
+    // Add your Prettier configuration here
   },
   "jest": {
-    
-  },
-  "author": "Fernando",
-  "license": "MIT"
+    // Add your Jest configuration here
+  }
 }
