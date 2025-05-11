@@ -1,0 +1,38 @@
+{
+  "name": "challenge-fullstack",
+  "version": "1.0.0",
+  "description": "A brief description of your project",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm install",
+    "lint": "eslint .",
+    "prettier": "prettier --write .",
+    "test": "CI=true jest"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",      
+    "prettier": "^2.0.0",    
+    "jest": "^27.0.0"        
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "rules": {
+     
+    }
+  },
+  "prettier": {
+
+  },
+  "jest": {
+    
+  },
+  "author": "Fernando",
+  "license": "MIT"
+}
