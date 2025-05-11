@@ -10,10 +10,9 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "Your Name",
+  "author": "Fernando",
   "license": "MIT",
   "dependencies": {
-    // Add your project dependencies here
   },
   "devDependencies": {
     "eslint": "^8.45.0",
@@ -28,13 +27,10 @@
       "node": true
     },
     "rules": {
-      // Add your custom ESLint rules here
     }
   },
   "prettier": {
-    // Add your Prettier configuration here
   },
   "jest": {
-    // Add your Jest configuration here
   }
 }
