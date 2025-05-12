@@ -15,6 +15,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2
       - run: npm install
+      - run: npm install eslint-config-react-app --save-dev
       - run: npm run lint
       - run: npm run prettier --write
       - run: CI=true npm run test
