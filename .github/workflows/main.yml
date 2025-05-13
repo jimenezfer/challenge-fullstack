@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v2
       - run: npm cache clean --force
       - run: npm install
+      - run: npm install prop-types
       - run: npm install react react-dom
       - run: npm install --save-dev eslint @babel/eslint-parser
       - run: npm install eslint-config-react-app --save-dev

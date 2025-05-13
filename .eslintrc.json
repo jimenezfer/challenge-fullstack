@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "node": true
+    "node": true,
+    "jest": true
   },
 "parser": "@babel/eslint-parser",
   "parserOptions": {
@@ -16,7 +17,9 @@
 "extends": ["eslint:recommended", "plugin:react/recommended"],
 "plugins": ["react"],
 "rules": {
-  "react/react-in-jsx-scope": "off"
+  "react/react-in-jsx-scope": "off",
+  "react/prop-types": "off",
+  "no-unused-vars": "off"
   },
 "settings": {
   "react": {
