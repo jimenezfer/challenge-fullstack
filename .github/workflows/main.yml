@@ -19,6 +19,7 @@ jobs:
       - run: npm install --save-dev @babel/preset-react
       - run: npm run lint
       - run: npm run prettier --write
+      - run: npm install --save-dev @testing-library/react
       - run: CI=true npm run test
       - run: npm run build
 
