@@ -4,11 +4,22 @@
     "es2021": true,
     "node": true
   },
+"parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2021,
-    "sourceType": "module"
+    "sourceType": "module",
+    "requireConfigFile": false,
+    "ecmaFeatures": {
+      "jsx": true
+    }  
   },
-  "extends": ["eslint:recommended"],
-  "rules": {
-  }
+"extends": ["eslint:recommended", "plugin:react/recommended"],
+"plugins": ["react"],
+"rules": {
+  },
+"settings": {
+  "react": {
+    "version": "detect"
+    }
+  } 
 }
