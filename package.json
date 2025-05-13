@@ -18,8 +18,9 @@
     "eslint": "^8.45.0",
     "prettier": "^3.0.0",
     "jest": "^29.0.0",
-     "@babel/preset-env": "^7.20.0",
-    "@babel/preset-react": "^7.20.0"
+    "@babel/preset-react": "^latest-version",
+    "@babel/preset-env": "^latest-version",
+    "babel-loader": "^latest-version"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
