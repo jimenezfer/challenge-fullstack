@@ -35,6 +35,8 @@
   "prettier": {
   },
   "jest": {
+  "transform": {
+    "^.+\\.jsx?$": "babel-jest"
   },
   "scripts": {
   "lint": "eslint ."
