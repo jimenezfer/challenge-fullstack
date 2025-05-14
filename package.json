@@ -43,7 +43,8 @@
      }
   },
   "scripts": {
-  "lint": ""
+  "lint": "",
+  "prettier": "prettier --write ."  
 }
 
 }
