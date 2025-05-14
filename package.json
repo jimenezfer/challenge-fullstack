@@ -44,7 +44,8 @@
   },
   "scripts": {
   "lint": "",
-  "prettier": "prettier --write ."  
+  "prettier": "prettier --write .",
+  "test": "jest"  
 }
 
 }
