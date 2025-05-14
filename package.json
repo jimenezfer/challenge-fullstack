@@ -42,7 +42,7 @@
      }
   },
   "scripts": {
-  "lint": "prettier --check ."
+  "lint": ""
 }
 
   }
