@@ -50,7 +50,7 @@
   "lint": "",
   "prettier": "prettier --write .",
   "test": "jest",
-  "build": "babel src --out-dir dist"  
+  "build": "babel codebase/rdicidr-0.1.0 --out-dir dist"  
 }
 
 }
