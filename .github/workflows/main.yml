@@ -45,4 +45,4 @@ jobs:
       
       - name: Connect to EC2 Instance
         run: |
-          aws ec2 ssh --instance-ids i-07151c021accf6335 --key-name --key-name $K8S_HOST && \ whoami
+          aws ec2 ssh --instance-ids i-07151c021accf6335 --key-name $K8S_HOST && \ whoami
