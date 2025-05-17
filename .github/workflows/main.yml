@@ -42,7 +42,7 @@ jobs:
       - name: Assume Role
         run: |
           aws sts assume-role --role-arn ${{ secrets.ARN_AWS }} --role-session-name SessionName --duration-seconds 3600 > /tmp/credentials && \
-          echo [default] > /tmp/profile && \
-          cat /tmp/credentials >> /tmp/profile && \
-          echo /temp/profile \
-          mv /tmp/profile ~/.aws/prof
+      
+      - name: Connect to EC2 Instance
+        run: |
+          aws ec2 ssh --instance-ids i-07151c021accf6335 --key-name --key-name $K8S_HOST && \ whoami
