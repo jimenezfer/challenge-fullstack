@@ -46,7 +46,7 @@ jobs:
       - name: Write private key from secret
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.K8S_HOST }}" | base64 --decode > ~/.ssh/k8s_host_key.pem
+          echo "${{ secrets.K8S_HOST }}" > ~/.ssh/k8s_host_key.pem
           chmod 600 ~/.ssh/k8s_host_key.pem
           ls ~/.ssh
           cat ~/.ssh/k8s_host_key.pem
