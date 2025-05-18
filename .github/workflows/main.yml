@@ -48,6 +48,7 @@ jobs:
           mkdir -p ~/.ssh
           printf "%s" "${{ secrets.K8S_HOST }}" > ~/.ssh/k8s_host_key.pem
           chmod 600 ~/.ssh/k8s_host_key.pem
+          mv ~/.ssh/k8s_host_key.pem /home/runner/.ssh/
 
       - name: SSH into EC2 and run commands
         run: |
