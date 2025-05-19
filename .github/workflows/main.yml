@@ -61,6 +61,7 @@ jobs:
               
       - name: Deployment to EC2 
         run: |
+          git clone https://github.com/jimenezfer/challenge-fullstack.git
           cd challenge-fullstack/k8
           kubectl apply -f namespace.yaml
           kubectl apply -f secret.yaml
