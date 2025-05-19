@@ -1,0 +1,24 @@
+name: Auto Create and Merge PR from Test Branch to Main
+
+on:
+  push:
+    branches:
+      - test-branch
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        run: git checkout test-branch
+
+      - name: Set up Python
+        run: |
+          sudo apt-get install python3 python3-pip
+          python3 -m pip install requests
+
+      - name: Run Auto Merge Script
+        env:
+          GITHUB_TOKEN: 'secrets.TOKEN_GITHUB'  # Replace with your actual token
+          GITHUB_REPOSITORY: 'jimenezfer/challenge-fullstack'
+        run: python3 auto_merge.py
