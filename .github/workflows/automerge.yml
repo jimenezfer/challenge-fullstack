@@ -1,0 +1,30 @@
+name: Auto Merge Test Branch to Main
+
+on:
+  push:
+    branches:
+      - test-branch
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          title: 'Auto PR: Merge test-branch into main'
+          body: 'This PR is automatically created to merge changes from test-branch to main.'
+          base: main
+          head: test-branch
+          draft: false
+
+      - name: Merge Pull Request
+        if: steps.create_pr.outputs.pull_request_url != ''
+        uses: peter-evans/merge-pull-request@v3
+        with:
+          pull_request_url: ${{ steps.create_pr.outputs.pull_request_url }}
+          merge_method: squash
