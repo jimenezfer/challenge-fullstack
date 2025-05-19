@@ -63,9 +63,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/k8s_host_key.pem \
               ubuntu@54.153.88.52 \
-              "echo Connected to EC2 && hostname && whoami" \
-              git clone https://github.com/jimenezfer/challenge-fullstack.git
-          
+              "echo Connected to EC2 && hostname && whoami"          
               
       - name: Deployment to EC2 
         run: |
