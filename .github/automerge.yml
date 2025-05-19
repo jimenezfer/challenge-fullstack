@@ -12,6 +12,14 @@ jobs:
       - name: Checkout code
         run: git checkout test-branch
 
+      - name: Check if test-branch is ahead of main
+        run: |
+          git fetch origin main
+          if [ $(git rev-list --count origin/main..HEAD) -eq 0 ]; then
+            echo "No new commits ahead of main. Exiting."
+            exit 0
+          fi
+
       - name: Set up Python
         run: |
           sudo apt-get install python3 python3-pip
