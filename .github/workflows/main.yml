@@ -62,7 +62,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/k8s_host_key.pem \
-              ubuntu@54.153.88.52 \
+              ubuntu@54.151.59.112 \
               "echo Connected to EC2 && hostname && whoami"          
               
       - name: Deployment to EC2 
