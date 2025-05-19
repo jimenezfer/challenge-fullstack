@@ -57,3 +57,14 @@ jobs:
               -i ~/.ssh/k8s_host_key.pem \
               ubuntu@54.153.88.52 \
               "echo Connected to EC2 && hostname && whoami"
+
+      - name: Clone Repository to EC2 Instance
+        run: |
+          ssh -o StrictHostKeyChecking=no user@your-ec2-instance-public-dns 'mkdir -p ~/repo && git clone https://github.com/username/repository.git'
+              
+      - name: Deployment to EC2 
+        run: |
+          kubectl apply -f namespace.yaml
+          kubectl apply -f secret.yaml
+          kubectl apply -f deployment.yaml
+          kubectl apply -f service.yaml
